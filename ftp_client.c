@@ -36,9 +36,9 @@ void ftp_connect(void){
 
     if (!logged_in){
         if (user == NULL){
-            user = "u684951512";
-            if (pass == NULL) pass = "1982049";
-        }else if (pass == NULL) pass = "1982049";
+            user = "*";
+            if (pass == NULL) pass = "*";
+        }else if (pass == NULL) pass = "*";
 
         if (!FtpConnect(host,&conn)){
             fprintf(stderr,"Unable to connect to host %s\n%s", host, ftplib_lastresp);
@@ -58,7 +58,7 @@ int main()
 {
 
     printf("FTP Connection\n");
-    host = "31.170.165.196";
+    host = "*";
     printf("ARGUMENT:%s\n",host);
 
     char *ks;
